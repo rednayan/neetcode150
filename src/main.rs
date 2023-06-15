@@ -1,7 +1,7 @@
 mod lib;
 
 fn main() {
-    let nums = vec![1];
+    let nums = vec![1, 2, 3, 4];
     let k = 1;
     lib::k_frequent_element(nums.clone(), k);
     lib::contains_duplicate(nums.clone());
@@ -13,4 +13,5 @@ fn main() {
         "let".to_string(),
         "teg".to_string(),
     ]);
+    lib::product_except_self(nums);
 }

@@ -78,3 +78,20 @@ pub fn k_frequent_element(nums: Vec<i32>, k: u32) -> Vec<i32> {
     }
     return y;
 }
+
+pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
+    let mut v = Vec::new();
+    let mut product = 1;
+    for i in nums.clone() {
+        product *= i;
+    }
+    for i in nums {
+        v.push(division(product, i as u32));
+    }
+    println!("{v:?}");
+    return v;
+}
+
+fn division(product: i32, i: u32) -> i32 {
+    product / i as i32
+}
